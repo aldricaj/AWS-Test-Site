@@ -15,7 +15,7 @@
             $pass = trim(fgets($pass_file));
             $db_name = "agency_assignments";
             $db_conn = new mysqli($servername,$usr,$pass,$db_name);
-            fclose($myfile);
+            fclose($pass_file);
             return $db_conn->query($queryText);
         }
         /*
