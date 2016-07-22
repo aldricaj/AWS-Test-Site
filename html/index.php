@@ -25,10 +25,14 @@
             // Make database connection
             $servername = "localhost";
             $username = "root";
-            $password = "";
+            $pass_file = fopen(".mysql-pass","r");
+            $password = trim(fgets($pass_file));
+            
+            var_dump($password=="pass ");
             $dbname = "agency_assignments"; 
             $conn = new mysqli($servername, $username, $password, $dbname);
             
+            fclose($pass_file);
             // SQL query for the dropdown box
             $agency_query = "SELECT `Agency` FROM `Assignments`";
 

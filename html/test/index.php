@@ -11,10 +11,11 @@
             // establish connection to database
             $servername = "localhost";
             $usr = "root";
-            $pass = "";
+            $pass_file=fopen(".mysql-pass","r");
+            $pass = trim(fgets($pass_file));
             $db_name = "agency_assignments";
             $db_conn = new mysqli($servername,$usr,$pass,$db_name);
-
+            fclose($myfile);
             return $db_conn->query($queryText);
         }
         /*
