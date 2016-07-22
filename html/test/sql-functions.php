@@ -1,8 +1,9 @@
+
+
+<?php
 /*
  * This file holds several php functions for acessing the agency assignments
  */
-
-<?php
     /*
      *  This function querys the database using the passed query 
      *  and returns the resulting table
