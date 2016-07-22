@@ -11,7 +11,7 @@
             // establish connection to database
             $servername = "localhost";
             $usr = "root";
-            $pass = "Scout16";
+            $pass = "";
             $db_name = "agency_assignments";
             $db_conn = new mysqli($servername,$usr,$pass,$db_name);
 
